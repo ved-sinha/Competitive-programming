@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int count=0;
+int res=0;
+
+int mul(int a,int b) {
+    count++;
+    if(count>abs(b)) {
+    if(b>0 && a>0 || b<0 && a<0)
+    return res;
+    else if((b>0 && a<0) || (b<0 && a>0))
+    return 0-res;
+    }
+    res+=abs(a);
+    mul(a,b);
+}
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    cout<<mul(a,b);
+}
