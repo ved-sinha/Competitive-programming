@@ -1,0 +1,13 @@
+#include <iostream>
+#include<cstdlib>
+using namespace std;
+
+int main() {
+	// your code goes here
+	//srand is intialise with time stamp so number will never be same
+	//because seed value is time and it never is the same
+	//if srand(1) -> it will give same value every time;
+	srand(time(NULL));
+	cout<<"The number is"<<rand()%100;
+	return 0;
+}
